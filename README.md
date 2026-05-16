@@ -35,7 +35,7 @@ All AI calls go through the backend service so the API key never reaches the bro
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/insightsai-notes.git
+git clone  https://github.com/radhamudgal/InsightsAI-Notes
 cd insightsai-notes
 ```
 
