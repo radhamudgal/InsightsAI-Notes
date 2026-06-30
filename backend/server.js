@@ -6,17 +6,8 @@ require('dotenv').config();
 const app = express();
 
 // allow requests from frontend — supports both local dev and production
-const allowedOrigins = [
-  process.env.CLIENT_URL,
-  'http://localhost:5173',
-].filter(Boolean);
-
 app.use(cors({
-  origin: (origin, callback) => {
-    // allow requests with no origin (e.g. curl, Postman)
-    if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
-    callback(new Error('Not allowed by CORS'));
-  },
+  origin: true, // reflect the request origin — works for all environments
   credentials: true,
 }));
 app.use(express.json());
